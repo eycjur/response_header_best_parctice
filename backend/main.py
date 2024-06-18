@@ -26,7 +26,7 @@ def create_todos(body: TodoBody) -> dict[str, str]:
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

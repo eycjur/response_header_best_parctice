@@ -1,6 +1,6 @@
-# Newtwork Sample
+# API Sample
 
-このリポジトリは
+このリポジトリはレスポンスヘッダーの設定を確認するためのサンプルです。
 
 ## Setup
 
@@ -12,6 +12,9 @@ cd ..
 cd backend
 pip install -r requirements.txt
 cd ..
+
+# install nginx
+# ex. brew install nginx(mac)
 ```
 
 ## Run Server
@@ -24,4 +27,9 @@ cd ..
 cd backend
 python app.py &
 cd ..
+
+nginx -c $(pwd)/frontend/nginx.conf
+
+# stop
+nginx -s stop
 ```
