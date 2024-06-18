@@ -1,6 +1,7 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -11,17 +12,22 @@ todos = [
     "sample todo 3",
 ]
 
+headers = {
+    'Content-Security-Policy': "default-src 'self'; frame-ancestors 'none';"
+}
+
 class TodoBody(BaseModel):
     todo: str
 
 @app.get("/todos")
-def read_todos() -> list[str]:
-    return todos
+def read_todos() -> JSONResponse:
+    return JSONResponse(content=todos, headers=headers)
 
 @app.post("/todos")
-def create_todos(body: TodoBody) -> dict[str, str]:
+def create_todos(body: TodoBody) -> JSONResponse:
     todos.append(body.todo)
-    return {"message": "Todo created successfully!"}
+    return JSONResponse(content={"message": "Todo created successfully!"}, headers=headers)
+
 
 
 app.add_middleware(
