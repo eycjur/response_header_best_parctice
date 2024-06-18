@@ -20,16 +20,13 @@ cd ..
 ## Run Server
 
 ```bash
-cd frontend
-npm run dev &
-cd ..
+make frontend-start
+make backend-start
+make nginx-start
+```
 
-cd backend
-python app.py &
-cd ..
+nginxを停止する場合は以下のコマンドを実行してください。
 
-nginx -c $(pwd)/frontend/nginx.conf
-
-# stop
-nginx -s stop
+```bash
+make nginx-stop
 ```
