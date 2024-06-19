@@ -14,7 +14,8 @@ todos = [
 
 headers = {
     'Content-Security-Policy': "default-src 'self'; frame-ancestors 'none';",
-    'Cross-Origin-Resource-Policy': 'same-origin'
+    'Cross-Origin-Resource-Policy': 'same-origin',
+    'X-Powered-By': "",
 }
 
 class TodoBody(BaseModel):
