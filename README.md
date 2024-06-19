@@ -25,7 +25,9 @@ make backend-start
 make nginx-start
 ```
 
-nginxを停止する場合は以下のコマンドを実行してください。
+http://localhost:80 からアプリにアクセスできます  
+
+なお、nginxを停止する場合は以下のコマンドを実行してください。
 
 ```bash
 make nginx-stop
