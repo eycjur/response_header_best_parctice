@@ -35,5 +35,5 @@ make nginx-stop
 
 ## Best Practice
 
-フロントエンドの設定は、 [frontend/nginx.conf](frontend/nginx.conf) を参照してください。
+フロントエンドの設定は、 [frontend/nginx.conf](frontend/nginx.conf) を参照してください。  
 バックエンドの設定は、 [backend/main.py](backend/main.py) を参照してください。

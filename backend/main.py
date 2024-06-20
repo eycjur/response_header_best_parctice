@@ -13,7 +13,7 @@ todos = [
 ]
 
 headers = {
-    'Content-Security-Policy': "default-src 'self'; frame-ancestors 'none';",
+    'Content-Security-Policy': "default-src 'none'; frame-ancestors 'none';",
     'Cross-Origin-Resource-Policy': 'same-origin',
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
     'X-Powered-By': "",

@@ -16,3 +16,11 @@ start-frontend:
 .PHONY: start-backend
 start-backend:
 	cd backend && python main.py
+
+.PHONY: ngrok-frontend
+ngrok-frontend:
+	ngrok http 80
+
+.PHONY: ngrok-backend
+ngrok-backend:
+	ngrok http 8080
