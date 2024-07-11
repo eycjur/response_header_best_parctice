@@ -20,9 +20,9 @@ cd ..
 ## Run Server
 
 ```bash
-make frontend-start
-make backend-start
-make nginx-start
+make start-frontend
+make start-backend
+make start-nginx
 ```
 
 http://localhost:80 からアプリにアクセスできます  
@@ -30,7 +30,7 @@ http://localhost:80 からアプリにアクセスできます
 なお、nginxを停止する場合は以下のコマンドを実行してください。
 
 ```bash
-make nginx-stop
+make stop-nginx
 ```
 
 ## Best Practice
